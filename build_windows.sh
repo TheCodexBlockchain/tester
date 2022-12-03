@@ -23,6 +23,6 @@ fi
 	cd ..
 
 # Create zip file of binaries
-	cp SAPP/src/sapphired.exe SAPP/src/sapphire-cli.exe SAPP/src/sapphire-tx.exe SAPP/src/qt/sapphire-qt.exe .
+	cp SAPP/src/sapphired.exe tester/src/sapphire-cli.exe tester/src/sapphire-tx.exe tester/src/qt/sapphire-qt.exe .
 	zip SAPP-Windows.zip sapphired.exe sapphire-cli.exe sapphire-tx.exe sapphire-qt.exe
 	rm -f sapphired.exe sapphire-cli.exe sapphire-tx.exe sapphire-qt.exe
