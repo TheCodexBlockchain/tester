@@ -358,11 +358,11 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x13;
-        pchMessageStart[1] = 0xb2;
-        pchMessageStart[2] = 0x3e;
-        pchMessageStart[3] = 0x58;
-        nDefaultPort = 45328;
+        pchMessageStart[0] = 0x11;
+        pchMessageStart[1] = 0xbb;
+        pchMessageStart[2] = 0x33;
+        pchMessageStart[3] = 0x12;
+        nDefaultPort = 36912;
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.emplace_back(CDNSSeedData("seeder", "seeder.sappcoin.com", true));
@@ -375,7 +375,7 @@ public:
         vSeeds.emplace_back(CDNSSeedData("seed7",  "seed7.sappcoin.com", true));
         vSeeds.emplace_back(CDNSSeedData("seed8",  "seed8.sappcoin.com", true));
 
-        base58Prefixes[PUBKEY_ADDRESS]  = std::vector<unsigned char>(1, 63);
+        base58Prefixes[PUBKEY_ADDRESS]  = std::vector<unsigned char>(1, 28);
         base58Prefixes[SCRIPT_ADDRESS]  = std::vector<unsigned char>(1, 18);
         base58Prefixes[SECRET_KEY]      = std::vector<unsigned char>(1, 25);
         base58Prefixes[EXT_PUBLIC_KEY]  = boost::assign::list_of(0x02)(0x2D)(0x25)(0x63).convert_to_container<std::vector<unsigned char> >();
@@ -386,7 +386,7 @@ public:
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
         //convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main)); // added
 
-        base58Prefixes[PUBKEY_ADDRESS_BIR]  = std::vector<unsigned char>(1, 45);
+        base58Prefixes[PUBKEY_ADDRESS_BIR]  = std::vector<unsigned char>(1, 28);
         base58Prefixes[SECRET_KEY_BIR]      = std::vector<unsigned char>(1, 179);
     }
 
