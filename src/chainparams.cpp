@@ -328,11 +328,11 @@ public:
         // Network upgrades
         consensus.vUpgrades[Consensus::BASE_NETWORK].nActivationHeight                   = Consensus::NetworkUpgrade::ALWAYS_ACTIVE;
         consensus.vUpgrades[Consensus::UPGRADE_TESTDUMMY].nActivationHeight              = Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
-        consensus.vUpgrades[Consensus::UPGRADE_POS].nActivationHeight                    = 501;
-        consensus.vUpgrades[Consensus::UPGRADE_POS_V2].nActivationHeight                 = 905001;
+        consensus.vUpgrades[Consensus::UPGRADE_POS].nActivationHeight                    = 4;
+        consensus.vUpgrades[Consensus::UPGRADE_POS_V2].nActivationHeight                 = 9999999999;
         consensus.vUpgrades[Consensus::UPGRADE_ZC].nActivationHeight                     = Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
         consensus.vUpgrades[Consensus::UPGRADE_ZC_V2].nActivationHeight                  = Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
-        consensus.vUpgrades[Consensus::UPGRADE_BIP65].nActivationHeight                  = 905101;
+        consensus.vUpgrades[Consensus::UPGRADE_BIP65].nActivationHeight                  = 9999999999;
         consensus.vUpgrades[Consensus::UPGRADE_ZC_PUBLIC].nActivationHeight              = Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
         consensus.vUpgrades[Consensus::UPGRADE_STAKE_MIN_DEPTH_V1].nActivationHeight     = 574500;
         consensus.vUpgrades[Consensus::UPGRADE_STAKE_MODIFIER_V2].nActivationHeight      = 905201;
@@ -375,7 +375,7 @@ public:
         vSeeds.emplace_back(CDNSSeedData("seed7",  "seed7.sappcoin.com", true));
         vSeeds.emplace_back(CDNSSeedData("seed8",  "seed8.sappcoin.com", true));
 
-        base58Prefixes[PUBKEY_ADDRESS]  = std::vector<unsigned char>(1, 28);
+        base58Prefixes[PUBKEY_ADDRESS]  = std::vector<unsigned char>(1, 23);
         base58Prefixes[SCRIPT_ADDRESS]  = std::vector<unsigned char>(1, 18);
         base58Prefixes[SECRET_KEY]      = std::vector<unsigned char>(1, 25);
         base58Prefixes[EXT_PUBLIC_KEY]  = boost::assign::list_of(0x02)(0x2D)(0x25)(0x63).convert_to_container<std::vector<unsigned char> >();
@@ -386,7 +386,7 @@ public:
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
         //convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main)); // added
 
-        base58Prefixes[PUBKEY_ADDRESS_BIR]  = std::vector<unsigned char>(1, 28);
+        base58Prefixes[PUBKEY_ADDRESS_BIR]  = std::vector<unsigned char>(1, 23);
         base58Prefixes[SECRET_KEY_BIR]      = std::vector<unsigned char>(1, 179);
     }
 
