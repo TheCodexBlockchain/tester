@@ -11,8 +11,6 @@ Tester wallet repository
 • Maturity: 5 Confirmations   
 • Prefix: Tester addresses start with the capital letter "A"   
 • Ports: 36912 (p2p) / 45329 (rpc)   
-• Explorer https://explorer.decenomy.net/SAPP/blocks   
-• Website https://sappcoin.com/
 
 ### Rewards Breakdown
 ---
