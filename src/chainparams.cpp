@@ -66,9 +66,9 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1642468185, // * UNIX timestamp of last checkpoint block
-    12500494,   // * total number of transactions between genesis and last checkpoint
+    0,   // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the UpdateTip debug.log lines)
-    2820        // * estimated number of transactions per day after checkpoint
+    100000        // * estimated number of transactions per day after checkpoint
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
@@ -132,18 +132,6 @@ public:
         // burn addresses
         consensus.mBurnAddresses = {
             { "SXXXXXXXXXXXXXXXXXXXXXXXXXXXXFdBi4",      0 },
-            { "Sd2xcwvvtRH8P8sLemSiPjadTfBd9myPbW", 586593 },
-            { "ST74xpmzemL4ELiBpyDmirzgahujSUiYmM", 586593 },
-            { "Sic7sZBNkijna4zNLSVgTBkfr2ebP6c9wk", 586593 },
-            { "Sh8N9R2Li5Wm5B7g3xxfEotp9Vpp38baJM", 586593 },
-            { "SVAjKY5p9NPSNwG7PLK3VzeXUdJjm2W7CY", 586593 },
-            { "SQfMZVatpQR9b3KdKp992nxeEZNWkcz7d2", 586593 },
-            { "SNAgLi7pfHD6BDAkQQ74ixtT4o59wkqP8Y", 586593 },
-            { "SS6ZgTuvafGX98YqeHdu79wpGrR1KxuqMw", 586593 },
-            { "SMoP6U7uazpLdqZ18GQFVNNuV77UTK16wh", 586593 },
-            { "SjfZFjCv2PxNKQeDgW1RmsFjSpq5PngaZc", 586593 },
-            { "SPop7eX3kMjwojy1k1EHAqBoodhbski4tR", 586593 },
-            { "Sf3KBrFqmD3PBHrwTpdsFgUTctEz9mQn5Z", 586593 },
         };
 
         // height-based activations
@@ -155,12 +143,7 @@ public:
         consensus.height_ZC_RecalcAccumulators      = DISABLED;
 
         // Zerocoin-related params
-        consensus.ZC_Modulus = "25195908475657893494027183240048398571429282126204032027777137836043662020707595556264018525880784"
-                "4069182906412495150821892985591491761845028084891200728449926873928072877767359714183472702618963750149718246911"
-                "6507761337985909570009733045974880842840179742910064245869181719511874612151517265463228221686998754918242243363"
-                "7259085141865462043576798423387184774447920739934236584823824281198163815010674810451660377306056201619676256133"
-                "8441436038339044149526344321901146575444541784240209246165157233507787077498171257724679629263863563732899121548"
-                "31438167899885040445364023527381951378636564391212010397122822120720357";
+        consensus.ZC_Modulus = "25195908475657893494027183240048398571429282126204032027777137836043662020707595556264018525880784";
         consensus.ZC_MaxPublicSpendsPerTx = 637;    // Assume about 220 bytes each input
         consensus.ZC_MaxSpendsPerTx = 7;            // Assume about 20kb each input
         consensus.ZC_MinMintConfirmations = 20;
