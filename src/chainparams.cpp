@@ -65,7 +65,7 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1642468185, // * UNIX timestamp of last checkpoint block
+    1671292349, // * UNIX timestamp of last checkpoint block
     0,   // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the UpdateTip debug.log lines)
     100000        // * estimated number of transactions per day after checkpoint
@@ -98,7 +98,7 @@ public:
         networkID = CBaseChainParams::MAIN;
         strNetworkID = "main";
 
-        genesis = CreateGenesisBlock(1556165178, 2894113, 0x1e0ffff0, 1, 250 * COIN);
+        genesis = CreateGenesisBlock(1671292349, 351714, 0x1e0ffff0, 1, 1000 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x000000422ba4f1a80d66527c916b8bfe7f76f4dd8d2e408dca4c158d7312d02f"));
         assert(genesis.hashMerkleRoot == uint256S("0x9de98de0a4ae10c978327414448c6b1ce12435a8d32dbc59e62d6dd2649b9bbf"));
