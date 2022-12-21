@@ -59,14 +59,14 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
  */
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256S("00000eef0583695d6da23a78bab1c39939bbb54cf9bd5f0d4881c8eef364cd26"))
+    (0, uint256S("0x00000eef0583695d6da23a78bab1c39939bbb54cf9bd5f0d4881c8eef364cd26"))
 ;
 
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1626875610, // * UNIX timestamp of last checkpoint block
-    11936769,   // * total number of transactions between genesis and last checkpoint
+    1642468185, // * UNIX timestamp of last checkpoint block
+    12500494,   // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the UpdateTip debug.log lines)
     100000        // * estimated number of transactions per day after checkpoint
 };
@@ -238,7 +238,7 @@ public:
 
         genesis = CreateGenesisBlock(1556165178, 2894113, 0x1e0ffff0, 1, 250 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000eef0583695d6da23a78bab1c39939bbb54cf9bd5f0d4881c8eef364cd26"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00004cd62c655e1492e4d87736f23fdd6ad260980007b72bc33373aed2b79258"));
         assert(genesis.hashMerkleRoot == uint256S("0x62179b80cc4da52f1ff4bad5d690836a3a663d14d5581a63822963bf1613041b"));
 
         consensus.fPowAllowMinDifficultyBlocks = false;
