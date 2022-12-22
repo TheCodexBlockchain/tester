@@ -99,7 +99,7 @@ public:
         strNetworkID = "main";
 
 
-        genesis = CreateGenesisBlock(167166972, 2086128070, 0x1e0ffff0, 1, 250 * COIN);
+        genesis = CreateGenesisBlock(167166972, 2086128070, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x0000065b65f15c2f262f4cde1fb35a098626191dcf6886a29d48ff1073c57559"));
         assert(genesis.hashMerkleRoot == uint256S("0xde9b28723c6b285f4d573b3a1a80b185c254cc73abc62453159ed46d9ffe7511"));
@@ -133,18 +133,6 @@ public:
         // burn addresses
         consensus.mBurnAddresses = {
             { "SXXXXXXXXXXXXXXXXXXXXXXXXXXXXFdBi4",      0 },
-            { "Sd2xcwvvtRH8P8sLemSiPjadTfBd9myPbW", 586593 },
-            { "ST74xpmzemL4ELiBpyDmirzgahujSUiYmM", 586593 },
-            { "Sic7sZBNkijna4zNLSVgTBkfr2ebP6c9wk", 586593 },
-            { "Sh8N9R2Li5Wm5B7g3xxfEotp9Vpp38baJM", 586593 },
-            { "SVAjKY5p9NPSNwG7PLK3VzeXUdJjm2W7CY", 586593 },
-            { "SQfMZVatpQR9b3KdKp992nxeEZNWkcz7d2", 586593 },
-            { "SNAgLi7pfHD6BDAkQQ74ixtT4o59wkqP8Y", 586593 },
-            { "SS6ZgTuvafGX98YqeHdu79wpGrR1KxuqMw", 586593 },
-            { "SMoP6U7uazpLdqZ18GQFVNNuV77UTK16wh", 586593 },
-            { "SjfZFjCv2PxNKQeDgW1RmsFjSpq5PngaZc", 586593 },
-            { "SPop7eX3kMjwojy1k1EHAqBoodhbski4tR", 586593 },
-            { "Sf3KBrFqmD3PBHrwTpdsFgUTctEz9mQn5Z", 586593 },
         };
 
         // height-based activations
@@ -207,7 +195,7 @@ public:
         pchMessageStart[1] = 0xa2;
         pchMessageStart[2] = 0xd3;
         pchMessageStart[3] = 0x51;
-        nDefaultPort = 45328;
+        nDefaultPort = 36912;
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.emplace_back(CDNSSeedData("seeder", "seeder.sappcoin.com", true));
